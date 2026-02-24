@@ -1,10 +1,15 @@
-let questions = [];
+let allQuestions = {}; // To store the fetched JSON object
+let questions = []; // Active array based on selected difficulty
 let currentQuestionIndex = 0;
 let score = 0;
 
 // DOM Elements
+const startView = document.getElementById('start-view');
 const quizView = document.getElementById('quiz-view');
 const scoreView = document.getElementById('score-view');
+
+const difficultyButtons = document.querySelectorAll('.difficulty-btn');
+const activeDifficultyLabel = document.getElementById('active-difficulty-label');
 
 const questionTextElement = document.getElementById('question-text');
 const optionsContainer = document.getElementById('options-container');
@@ -22,37 +27,63 @@ const restartButton = document.getElementById('restart-btn');
 document.addEventListener('DOMContentLoaded', () => {
     fetchQuestions();
 
-    nextButton.addEventListener('click', handleNextButton);
-    restartButton.addEventListener('click', () => {
-        // Simple restart if questions are already loaded
-        if (questions.length > 0) {
-            startQuiz();
-        }
+    // Bind difficulty selection
+    difficultyButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const level = btn.dataset.level;
+            selectDifficulty(level);
+        });
     });
+
+    nextButton.addEventListener('click', handleNextButton);
+    restartButton.addEventListener('click', showStartScreen);
 });
 
 async function fetchQuestions() {
     try {
         const response = await fetch('questions.json');
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        questions = await response.json();
-        totalQNumElement.textContent = questions.length;
-        startQuiz();
+        if (!response.ok) throw new Error('Network response was not ok');
+        allQuestions = await response.json();
+
+        // Ensure start screen is visible initially once loaded
+        showStartScreen();
     } catch (error) {
         console.error('Error fetching questions:', error);
-        questionTextElement.textContent = "Error loading questions. Please ensure you are running this via a local server (e.g., Live Server) to allow fetch().";
+        questionTextElement.textContent = "Error loading questions. Please ensure you're using a local server (e.g., Live Server).";
+
+        // Show quiz view with the error message
+        startView.classList.add('hidden');
+        quizView.classList.remove('hidden');
     }
+}
+
+function showStartScreen() {
+    quizView.classList.add('hidden');
+    scoreView.classList.add('hidden');
+    startView.classList.remove('hidden');
+}
+
+function selectDifficulty(level) {
+    if (!allQuestions[level]) return;
+
+    questions = allQuestions[level];
+
+    // Update Header
+    let formattedLabel = level.charAt(0).toUpperCase() + level.slice(1);
+    activeDifficultyLabel.textContent = `${formattedLabel} Quiz`;
+
+    startQuiz();
 }
 
 function startQuiz() {
     currentQuestionIndex = 0;
     score = 0;
+    totalQNumElement.textContent = questions.length;
     nextButton.classList.add('hidden');
     nextButton.innerHTML = 'Next Question <i data-feather="arrow-right"></i>';
 
     // View Management
+    startView.classList.add('hidden');
     scoreView.classList.add('hidden');
     quizView.classList.remove('hidden');
 

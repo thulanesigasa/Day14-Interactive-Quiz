@@ -17,10 +17,34 @@
 
     <div class="container">
 
+        <!-- Difficulty Selection View -->
+        <div class="quiz-card" id="start-view">
+            <div class="score-header">
+                <h2>Select <span class="mil-accent">Difficulty</span></h2>
+                <i data-feather="crosshair" class="award-icon mil-accent"></i>
+                <p style="margin-bottom: 30px; color: var(--text-color);">Choose your level to begin!</p>
+            </div>
+
+            <div class="options-grid">
+                <button class="option-btn difficulty-btn" data-level="amateur">
+                    <span>Amateur (Beginner)</span>
+                    <i data-feather="star"></i>
+                </button>
+                <button class="option-btn difficulty-btn" data-level="intermediate">
+                    <span>Intermediate (Mid-level)</span>
+                    <i data-feather="zap"></i>
+                </button>
+                <button class="option-btn difficulty-btn" data-level="advanced">
+                    <span>Advanced (Expert)</span>
+                    <i data-feather="shield"></i>
+                </button>
+            </div>
+        </div>
+
         <!-- Quiz App View -->
-        <div class="quiz-card" id="quiz-view">
+        <div class="quiz-card hidden" id="quiz-view">
             <header class="quiz-header">
-                <span class="mil-accent">WebDev Quiz</span>
+                <span class="mil-accent" id="active-difficulty-label">WebDev Quiz</span>
                 <span class="question-count">Question <span id="current-q-num">1</span>/<span
                         id="total-q-num">5</span></span>
             </header>

@@ -1,102 +1,1508 @@
-[
-    {
-        "question": "What does HTML stand for?",
-        "options": [
-            "Hyper Text Preprocessor",
-            "Hyper Text Markup Language",
-            "Hyper Text Multiple Language",
-            "Hyper Tool Multi Language"
-        ],
-        "answer": 1
-    },
-    {
-        "question": "Which CSS property is used to control the spacing between elements?",
-        "options": [
-            "padding",
-            "margin",
-            "spacing",
-            "border"
-        ],
-        "answer": 1
-    },
-    {
-        "question": "How do you select an element with id 'demo' in CSS?",
-        "options": [
-            ".demo",
-            "*demo",
-            "#demo",
-            "demo"
-        ],
-        "answer": 2
-    },
-    {
-        "question": "Inside which HTML element do we put JavaScript?",
-        "options": [
-            "<javascript>",
-            "<js>",
-            "<script>",
-            "<scripting>"
-        ],
-        "answer": 2
-    },
-    {
-        "question": "Which of the following is not a JavaScript data type?",
-        "options": [
-            "Undefined",
-            "Number",
-            "Boolean",
-            "Float"
-        ],
-        "answer": 3
-    },
-    {
-        "question": "What is the correct syntax for referring to an external script called 'app.js'?",
-        "options": [
-            "<script href=\"app.js\">",
-            "<script name=\"app.js\">",
-            "<script src=\"app.js\">",
-            "<script file=\"app.js\">"
-        ],
-        "answer": 2
-    },
-    {
-        "question": "Which method is used to remove the last element from an array in JavaScript?",
-        "options": [
-            "pop()",
-            "push()",
-            "shift()",
-            "unshift()"
-        ],
-        "answer": 0
-    },
-    {
-        "question": "What does CSS stand for?",
-        "options": [
-            "Colorful Style Sheets",
-            "Creative Style Sheets",
-            "Cascading Style Sheets",
-            "Computer Style Sheets"
-        ],
-        "answer": 2
-    },
-    {
-        "question": "Which HTML attribute is used to define inline styles?",
-        "options": [
-            "class",
-            "style",
-            "font",
-            "styles"
-        ],
-        "answer": 1
-    },
-    {
-        "question": "How do you write 'Hello World' in an alert box?",
-        "options": [
-            "msgBox('Hello World');",
-            "alertBox('Hello World');",
-            "msg('Hello World');",
-            "alert('Hello World');"
-        ],
-        "answer": 3
-    }
-]
+{
+    "amateur": [
+        {
+            "question": "What does HTML stand for?",
+            "options": [
+                "Hyper HTML",
+                "Hyper Text Markup Language",
+                "Computer HTML",
+                "Standard HTML"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "What does CSS stand for?",
+            "options": [
+                "Computer CSS",
+                "Cascading Style Sheets",
+                "Standard CSS",
+                "Hyper CSS"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "What does JS stand for?",
+            "options": [
+                "Hyper JS",
+                "Standard JS",
+                "JavaScript",
+                "Computer JS"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "What does HTTP stand for?",
+            "options": [
+                "Hypertext Transfer Protocol",
+                "Computer HTTP",
+                "Standard HTTP",
+                "Hyper HTTP"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "What does URL stand for?",
+            "options": [
+                "Hyper URL",
+                "Standard URL",
+                "Uniform Resource Locator",
+                "Computer URL"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "What does DOM stand for?",
+            "options": [
+                "Document Object Model",
+                "Hyper DOM",
+                "Computer DOM",
+                "Standard DOM"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "What does API stand for?",
+            "options": [
+                "Standard API",
+                "Hyper API",
+                "Computer API",
+                "Application Programming Interface"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "What does JSON stand for?",
+            "options": [
+                "Hyper JSON",
+                "Computer JSON",
+                "Standard JSON",
+                "JavaScript Object Notation"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "What does XML stand for?",
+            "options": [
+                "Computer XML",
+                "Standard XML",
+                "eXtensible Markup Language",
+                "Hyper XML"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "What does SEO stand for?",
+            "options": [
+                "Hyper SEO",
+                "Standard SEO",
+                "Computer SEO",
+                "Search Engine Optimization"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "Which HTML tag is used to define a container?",
+            "options": [
+                "<div>",
+                "<container>",
+                "<def-div>",
+                "<html-div>"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "Which HTML tag is used to define a inline container?",
+            "options": [
+                "<span>",
+                "<def-span>",
+                "<inline container>",
+                "<html-span>"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "Which HTML tag is used to define a link?",
+            "options": [
+                "<def-a>",
+                "<a>",
+                "<link>",
+                "<html-a>"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "Which HTML tag is used to define a image?",
+            "options": [
+                "<def-img>",
+                "<img>",
+                "<image>",
+                "<html-img>"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "Which HTML tag is used to define a paragraph?",
+            "options": [
+                "<p>",
+                "<paragraph>",
+                "<html-p>",
+                "<def-p>"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "Which HTML tag is used to define a main heading?",
+            "options": [
+                "<html-h1>",
+                "<main heading>",
+                "<h1>",
+                "<def-h1>"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "Which HTML tag is used to define a unordered list?",
+            "options": [
+                "<unordered list>",
+                "<html-ul>",
+                "<def-ul>",
+                "<ul>"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "Which HTML tag is used to define a list item?",
+            "options": [
+                "<html-li>",
+                "<def-li>",
+                "<li>",
+                "<list item>"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "Which HTML tag is used to define a table?",
+            "options": [
+                "<table>",
+                "<html-table>",
+                "<table>",
+                "<def-table>"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "Which HTML tag is used to define a form?",
+            "options": [
+                "<def-form>",
+                "<form>",
+                "<form>",
+                "<html-form>"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "Which CSS property controls the color?",
+            "options": [
+                "style-color",
+                "css-color",
+                "color",
+                "element-color"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "Which CSS property controls the font-size?",
+            "options": [
+                "style-font-size",
+                "element-font-size",
+                "css-font-size",
+                "font-size"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "Which CSS property controls the background-color?",
+            "options": [
+                "css-background-color",
+                "background-color",
+                "style-background-color",
+                "element-background-color"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "Which CSS property controls the margin?",
+            "options": [
+                "css-margin",
+                "element-margin",
+                "margin",
+                "style-margin"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "Which CSS property controls the padding?",
+            "options": [
+                "padding",
+                "css-padding",
+                "element-padding",
+                "style-padding"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "Which CSS property controls the border?",
+            "options": [
+                "css-border",
+                "element-border",
+                "border",
+                "style-border"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "Which CSS property controls the display?",
+            "options": [
+                "css-display",
+                "style-display",
+                "display",
+                "element-display"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "Which CSS property controls the position?",
+            "options": [
+                "style-position",
+                "element-position",
+                "css-position",
+                "position"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "Which CSS property controls the width?",
+            "options": [
+                "css-width",
+                "element-width",
+                "style-width",
+                "width"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "Which CSS property controls the height?",
+            "options": [
+                "element-height",
+                "style-height",
+                "css-height",
+                "height"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "Which JavaScript method is ` alert() `?",
+            "options": [
+                "A CSS rule",
+                "A server command",
+                "An HTML tag",
+                "A built-in function"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "Which JavaScript method is ` console.log() `?",
+            "options": [
+                "An HTML tag",
+                "A server command",
+                "A CSS rule",
+                "A built-in function"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "Which JavaScript method is ` prompt() `?",
+            "options": [
+                "A server command",
+                "An HTML tag",
+                "A CSS rule",
+                "A built-in function"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "Which JavaScript method is ` Math.random() `?",
+            "options": [
+                "A CSS rule",
+                "A built-in function",
+                "A server command",
+                "An HTML tag"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "Which JavaScript method is ` parseInt() `?",
+            "options": [
+                "An HTML tag",
+                "A server command",
+                "A CSS rule",
+                "A built-in function"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "Which JavaScript method is ` parseFloat() `?",
+            "options": [
+                "A CSS rule",
+                "A server command",
+                "An HTML tag",
+                "A built-in function"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "Which JavaScript method is ` setTimeout() `?",
+            "options": [
+                "A built-in function",
+                "An HTML tag",
+                "A server command",
+                "A CSS rule"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "Which JavaScript method is ` setInterval() `?",
+            "options": [
+                "A CSS rule",
+                "An HTML tag",
+                "A server command",
+                "A built-in function"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "Which JavaScript method is ` Date.now() `?",
+            "options": [
+                "A server command",
+                "An HTML tag",
+                "A CSS rule",
+                "A built-in function"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "Which JavaScript method is ` isNaN() `?",
+            "options": [
+                "An HTML tag",
+                "A built-in function",
+                "A CSS rule",
+                "A server command"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "Basic terminology check 41: Is HTML a programming language?",
+            "options": [
+                "Only in HTML5",
+                "No, it's a markup language",
+                "It's a database",
+                "Yes"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "Basic terminology check 42: Is HTML a programming language?",
+            "options": [
+                "It's a database",
+                "No, it's a markup language",
+                "Only in HTML5",
+                "Yes"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "Basic terminology check 43: Is HTML a programming language?",
+            "options": [
+                "Only in HTML5",
+                "Yes",
+                "No, it's a markup language",
+                "It's a database"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "Basic terminology check 44: Is HTML a programming language?",
+            "options": [
+                "No, it's a markup language",
+                "It's a database",
+                "Yes",
+                "Only in HTML5"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "Basic terminology check 45: Is HTML a programming language?",
+            "options": [
+                "Only in HTML5",
+                "No, it's a markup language",
+                "Yes",
+                "It's a database"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "Basic terminology check 46: Is HTML a programming language?",
+            "options": [
+                "Only in HTML5",
+                "Yes",
+                "It's a database",
+                "No, it's a markup language"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "Basic terminology check 47: Is HTML a programming language?",
+            "options": [
+                "Only in HTML5",
+                "Yes",
+                "No, it's a markup language",
+                "It's a database"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "Basic terminology check 48: Is HTML a programming language?",
+            "options": [
+                "Yes",
+                "No, it's a markup language",
+                "Only in HTML5",
+                "It's a database"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "Basic terminology check 49: Is HTML a programming language?",
+            "options": [
+                "Only in HTML5",
+                "It's a database",
+                "No, it's a markup language",
+                "Yes"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "Basic terminology check 50: Is HTML a programming language?",
+            "options": [
+                "No, it's a markup language",
+                "Yes",
+                "It's a database",
+                "Only in HTML5"
+            ],
+            "answer": 0
+        }
+    ],
+    "intermediate": [
+        {
+            "question": "Which is a feature introduced in ES6: let?",
+            "options": [
+                "Yes, it is an ES6 feature",
+                "It's a CSS feature",
+                "No, it is from ES5",
+                "It's only in Node.js"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "Which is a feature introduced in ES6: const?",
+            "options": [
+                "No, it is from ES5",
+                "It's only in Node.js",
+                "It's a CSS feature",
+                "Yes, it is an ES6 feature"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "Which is a feature introduced in ES6: arrow functions?",
+            "options": [
+                "No, it is from ES5",
+                "It's a CSS feature",
+                "It's only in Node.js",
+                "Yes, it is an ES6 feature"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "Which is a feature introduced in ES6: template literals?",
+            "options": [
+                "No, it is from ES5",
+                "It's a CSS feature",
+                "It's only in Node.js",
+                "Yes, it is an ES6 feature"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "Which is a feature introduced in ES6: destructuring?",
+            "options": [
+                "No, it is from ES5",
+                "Yes, it is an ES6 feature",
+                "It's only in Node.js",
+                "It's a CSS feature"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "Which is a feature introduced in ES6: spread operator?",
+            "options": [
+                "It's a CSS feature",
+                "It's only in Node.js",
+                "Yes, it is an ES6 feature",
+                "No, it is from ES5"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "Which is a feature introduced in ES6: promises?",
+            "options": [
+                "It's only in Node.js",
+                "Yes, it is an ES6 feature",
+                "No, it is from ES5",
+                "It's a CSS feature"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "Which is a feature introduced in ES6: classes?",
+            "options": [
+                "Yes, it is an ES6 feature",
+                "It's a CSS feature",
+                "It's only in Node.js",
+                "No, it is from ES5"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "Which is a feature introduced in ES6: modules?",
+            "options": [
+                "No, it is from ES5",
+                "It's only in Node.js",
+                "It's a CSS feature",
+                "Yes, it is an ES6 feature"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "Which is a feature introduced in ES6: default parameters?",
+            "options": [
+                "No, it is from ES5",
+                "It's only in Node.js",
+                "Yes, it is an ES6 feature",
+                "It's a CSS feature"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "In CSS Flexbox, what does `justify-content` do (Question var 10)?",
+            "options": [
+                "Wraps the items",
+                "Aligns items along the cross axis",
+                "Aligns items along the main axis",
+                "Changes the flex direction"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "In CSS Flexbox, what does `justify-content` do (Question var 11)?",
+            "options": [
+                "Aligns items along the main axis",
+                "Aligns items along the cross axis",
+                "Wraps the items",
+                "Changes the flex direction"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "In CSS Flexbox, what does `justify-content` do (Question var 12)?",
+            "options": [
+                "Wraps the items",
+                "Changes the flex direction",
+                "Aligns items along the cross axis",
+                "Aligns items along the main axis"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "In CSS Flexbox, what does `justify-content` do (Question var 13)?",
+            "options": [
+                "Aligns items along the main axis",
+                "Changes the flex direction",
+                "Wraps the items",
+                "Aligns items along the cross axis"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "In CSS Flexbox, what does `justify-content` do (Question var 14)?",
+            "options": [
+                "Changes the flex direction",
+                "Aligns items along the cross axis",
+                "Aligns items along the main axis",
+                "Wraps the items"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "In CSS Flexbox, what does `justify-content` do (Question var 15)?",
+            "options": [
+                "Aligns items along the cross axis",
+                "Changes the flex direction",
+                "Wraps the items",
+                "Aligns items along the main axis"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "In CSS Flexbox, what does `justify-content` do (Question var 16)?",
+            "options": [
+                "Changes the flex direction",
+                "Wraps the items",
+                "Aligns items along the main axis",
+                "Aligns items along the cross axis"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "In CSS Flexbox, what does `justify-content` do (Question var 17)?",
+            "options": [
+                "Aligns items along the main axis",
+                "Wraps the items",
+                "Aligns items along the cross axis",
+                "Changes the flex direction"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "In CSS Flexbox, what does `justify-content` do (Question var 18)?",
+            "options": [
+                "Wraps the items",
+                "Changes the flex direction",
+                "Aligns items along the main axis",
+                "Aligns items along the cross axis"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "In CSS Flexbox, what does `justify-content` do (Question var 19)?",
+            "options": [
+                "Aligns items along the cross axis",
+                "Aligns items along the main axis",
+                "Wraps the items",
+                "Changes the flex direction"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "How do you check if a variable `x` is an array in JS? (Q20)",
+            "options": [
+                "x.isArray()",
+                "typeof x === 'array'",
+                "Array.isArray(x)",
+                "x instanceof Array Object"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "How do you check if a variable `x` is an array in JS? (Q21)",
+            "options": [
+                "Array.isArray(x)",
+                "typeof x === 'array'",
+                "x instanceof Array Object",
+                "x.isArray()"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "How do you check if a variable `x` is an array in JS? (Q22)",
+            "options": [
+                "x.isArray()",
+                "x instanceof Array Object",
+                "typeof x === 'array'",
+                "Array.isArray(x)"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "How do you check if a variable `x` is an array in JS? (Q23)",
+            "options": [
+                "x instanceof Array Object",
+                "Array.isArray(x)",
+                "x.isArray()",
+                "typeof x === 'array'"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "How do you check if a variable `x` is an array in JS? (Q24)",
+            "options": [
+                "typeof x === 'array'",
+                "Array.isArray(x)",
+                "x instanceof Array Object",
+                "x.isArray()"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "How do you check if a variable `x` is an array in JS? (Q25)",
+            "options": [
+                "x instanceof Array Object",
+                "Array.isArray(x)",
+                "x.isArray()",
+                "typeof x === 'array'"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "How do you check if a variable `x` is an array in JS? (Q26)",
+            "options": [
+                "Array.isArray(x)",
+                "typeof x === 'array'",
+                "x.isArray()",
+                "x instanceof Array Object"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "How do you check if a variable `x` is an array in JS? (Q27)",
+            "options": [
+                "Array.isArray(x)",
+                "x instanceof Array Object",
+                "x.isArray()",
+                "typeof x === 'array'"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "How do you check if a variable `x` is an array in JS? (Q28)",
+            "options": [
+                "x instanceof Array Object",
+                "x.isArray()",
+                "typeof x === 'array'",
+                "Array.isArray(x)"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "How do you check if a variable `x` is an array in JS? (Q29)",
+            "options": [
+                "x.isArray()",
+                "Array.isArray(x)",
+                "x instanceof Array Object",
+                "typeof x === 'array'"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "What is the output of `typeof null` in JS? (Iteration 30)",
+            "options": [
+                "'undefined'",
+                "'error'",
+                "'null'",
+                "'object'"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "What is the output of `typeof null` in JS? (Iteration 31)",
+            "options": [
+                "'object'",
+                "'null'",
+                "'error'",
+                "'undefined'"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "What is the output of `typeof null` in JS? (Iteration 32)",
+            "options": [
+                "'undefined'",
+                "'error'",
+                "'null'",
+                "'object'"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "What is the output of `typeof null` in JS? (Iteration 33)",
+            "options": [
+                "'null'",
+                "'object'",
+                "'error'",
+                "'undefined'"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "What is the output of `typeof null` in JS? (Iteration 34)",
+            "options": [
+                "'object'",
+                "'undefined'",
+                "'error'",
+                "'null'"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "What is the output of `typeof null` in JS? (Iteration 35)",
+            "options": [
+                "'object'",
+                "'null'",
+                "'undefined'",
+                "'error'"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "What is the output of `typeof null` in JS? (Iteration 36)",
+            "options": [
+                "'object'",
+                "'undefined'",
+                "'error'",
+                "'null'"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "What is the output of `typeof null` in JS? (Iteration 37)",
+            "options": [
+                "'object'",
+                "'undefined'",
+                "'error'",
+                "'null'"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "What is the output of `typeof null` in JS? (Iteration 38)",
+            "options": [
+                "'object'",
+                "'error'",
+                "'undefined'",
+                "'null'"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "What is the output of `typeof null` in JS? (Iteration 39)",
+            "options": [
+                "'error'",
+                "'undefined'",
+                "'object'",
+                "'null'"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "What HTTP status code generally means 'Not Found'? (40)",
+            "options": [
+                "404",
+                "301",
+                "500",
+                "200"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "What HTTP status code generally means 'Not Found'? (41)",
+            "options": [
+                "301",
+                "200",
+                "404",
+                "500"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "What HTTP status code generally means 'Not Found'? (42)",
+            "options": [
+                "301",
+                "404",
+                "200",
+                "500"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "What HTTP status code generally means 'Not Found'? (43)",
+            "options": [
+                "301",
+                "500",
+                "200",
+                "404"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "What HTTP status code generally means 'Not Found'? (44)",
+            "options": [
+                "301",
+                "404",
+                "500",
+                "200"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "What HTTP status code generally means 'Not Found'? (45)",
+            "options": [
+                "301",
+                "404",
+                "500",
+                "200"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "What HTTP status code generally means 'Not Found'? (46)",
+            "options": [
+                "404",
+                "301",
+                "500",
+                "200"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "What HTTP status code generally means 'Not Found'? (47)",
+            "options": [
+                "404",
+                "301",
+                "500",
+                "200"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "What HTTP status code generally means 'Not Found'? (48)",
+            "options": [
+                "404",
+                "200",
+                "500",
+                "301"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "What HTTP status code generally means 'Not Found'? (49)",
+            "options": [
+                "404",
+                "200",
+                "301",
+                "500"
+            ],
+            "answer": 0
+        }
+    ],
+    "advanced": [
+        {
+            "question": "What is a consequence of Javascript's Event Loop handling microtasks? (Deep dive 0)",
+            "options": [
+                "It blocks the UI permanently",
+                "Microtasks run in a separate thread",
+                "Macrotasks execute first",
+                "Microtasks execute before the next macrotask"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "What is a consequence of Javascript's Event Loop handling microtasks? (Deep dive 1)",
+            "options": [
+                "Microtasks execute before the next macrotask",
+                "Macrotasks execute first",
+                "It blocks the UI permanently",
+                "Microtasks run in a separate thread"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "What is a consequence of Javascript's Event Loop handling microtasks? (Deep dive 2)",
+            "options": [
+                "Microtasks run in a separate thread",
+                "Microtasks execute before the next macrotask",
+                "It blocks the UI permanently",
+                "Macrotasks execute first"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "What is a consequence of Javascript's Event Loop handling microtasks? (Deep dive 3)",
+            "options": [
+                "Macrotasks execute first",
+                "Microtasks run in a separate thread",
+                "Microtasks execute before the next macrotask",
+                "It blocks the UI permanently"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "What is a consequence of Javascript's Event Loop handling microtasks? (Deep dive 4)",
+            "options": [
+                "It blocks the UI permanently",
+                "Microtasks execute before the next macrotask",
+                "Macrotasks execute first",
+                "Microtasks run in a separate thread"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "What is a consequence of Javascript's Event Loop handling microtasks? (Deep dive 5)",
+            "options": [
+                "Microtasks execute before the next macrotask",
+                "Macrotasks execute first",
+                "It blocks the UI permanently",
+                "Microtasks run in a separate thread"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "What is a consequence of Javascript's Event Loop handling microtasks? (Deep dive 6)",
+            "options": [
+                "Microtasks run in a separate thread",
+                "Microtasks execute before the next macrotask",
+                "Macrotasks execute first",
+                "It blocks the UI permanently"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "What is a consequence of Javascript's Event Loop handling microtasks? (Deep dive 7)",
+            "options": [
+                "Microtasks execute before the next macrotask",
+                "It blocks the UI permanently",
+                "Microtasks run in a separate thread",
+                "Macrotasks execute first"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "What is a consequence of Javascript's Event Loop handling microtasks? (Deep dive 8)",
+            "options": [
+                "Microtasks run in a separate thread",
+                "It blocks the UI permanently",
+                "Microtasks execute before the next macrotask",
+                "Macrotasks execute first"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "What is a consequence of Javascript's Event Loop handling microtasks? (Deep dive 9)",
+            "options": [
+                "Microtasks execute before the next macrotask",
+                "Macrotasks execute first",
+                "It blocks the UI permanently",
+                "Microtasks run in a separate thread"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "Which attack is mitigated using Content Security Policy (CSP)? (Sec 10)",
+            "options": [
+                "SQL Injection",
+                "DDoS",
+                "Brute Force",
+                "Cross-Site Scripting (XSS)"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "Which attack is mitigated using Content Security Policy (CSP)? (Sec 11)",
+            "options": [
+                "SQL Injection",
+                "Brute Force",
+                "Cross-Site Scripting (XSS)",
+                "DDoS"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "Which attack is mitigated using Content Security Policy (CSP)? (Sec 12)",
+            "options": [
+                "Cross-Site Scripting (XSS)",
+                "SQL Injection",
+                "DDoS",
+                "Brute Force"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "Which attack is mitigated using Content Security Policy (CSP)? (Sec 13)",
+            "options": [
+                "Brute Force",
+                "Cross-Site Scripting (XSS)",
+                "DDoS",
+                "SQL Injection"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "Which attack is mitigated using Content Security Policy (CSP)? (Sec 14)",
+            "options": [
+                "Cross-Site Scripting (XSS)",
+                "DDoS",
+                "Brute Force",
+                "SQL Injection"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "Which attack is mitigated using Content Security Policy (CSP)? (Sec 15)",
+            "options": [
+                "Brute Force",
+                "Cross-Site Scripting (XSS)",
+                "SQL Injection",
+                "DDoS"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "Which attack is mitigated using Content Security Policy (CSP)? (Sec 16)",
+            "options": [
+                "Cross-Site Scripting (XSS)",
+                "SQL Injection",
+                "DDoS",
+                "Brute Force"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "Which attack is mitigated using Content Security Policy (CSP)? (Sec 17)",
+            "options": [
+                "SQL Injection",
+                "DDoS",
+                "Cross-Site Scripting (XSS)",
+                "Brute Force"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "Which attack is mitigated using Content Security Policy (CSP)? (Sec 18)",
+            "options": [
+                "Brute Force",
+                "Cross-Site Scripting (XSS)",
+                "DDoS",
+                "SQL Injection"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "Which attack is mitigated using Content Security Policy (CSP)? (Sec 19)",
+            "options": [
+                "Cross-Site Scripting (XSS)",
+                "DDoS",
+                "SQL Injection",
+                "Brute Force"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "In React, what principle does the Virtual DOM uniquely rely on? (20)",
+            "options": [
+                "Server-Side shadow trees",
+                "Two-way data binding internals",
+                "Direct DOM mutation",
+                "Heuristic O(n) Diffing algorithm"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "In React, what principle does the Virtual DOM uniquely rely on? (21)",
+            "options": [
+                "Heuristic O(n) Diffing algorithm",
+                "Server-Side shadow trees",
+                "Direct DOM mutation",
+                "Two-way data binding internals"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "In React, what principle does the Virtual DOM uniquely rely on? (22)",
+            "options": [
+                "Server-Side shadow trees",
+                "Heuristic O(n) Diffing algorithm",
+                "Direct DOM mutation",
+                "Two-way data binding internals"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "In React, what principle does the Virtual DOM uniquely rely on? (23)",
+            "options": [
+                "Heuristic O(n) Diffing algorithm",
+                "Two-way data binding internals",
+                "Server-Side shadow trees",
+                "Direct DOM mutation"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "In React, what principle does the Virtual DOM uniquely rely on? (24)",
+            "options": [
+                "Server-Side shadow trees",
+                "Direct DOM mutation",
+                "Heuristic O(n) Diffing algorithm",
+                "Two-way data binding internals"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "In React, what principle does the Virtual DOM uniquely rely on? (25)",
+            "options": [
+                "Heuristic O(n) Diffing algorithm",
+                "Direct DOM mutation",
+                "Server-Side shadow trees",
+                "Two-way data binding internals"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "In React, what principle does the Virtual DOM uniquely rely on? (26)",
+            "options": [
+                "Two-way data binding internals",
+                "Direct DOM mutation",
+                "Heuristic O(n) Diffing algorithm",
+                "Server-Side shadow trees"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "In React, what principle does the Virtual DOM uniquely rely on? (27)",
+            "options": [
+                "Two-way data binding internals",
+                "Direct DOM mutation",
+                "Heuristic O(n) Diffing algorithm",
+                "Server-Side shadow trees"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "In React, what principle does the Virtual DOM uniquely rely on? (28)",
+            "options": [
+                "Heuristic O(n) Diffing algorithm",
+                "Server-Side shadow trees",
+                "Direct DOM mutation",
+                "Two-way data binding internals"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "In React, what principle does the Virtual DOM uniquely rely on? (29)",
+            "options": [
+                "Direct DOM mutation",
+                "Heuristic O(n) Diffing algorithm",
+                "Two-way data binding internals",
+                "Server-Side shadow trees"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "What is the time complexity of looking up a key in a standard JS Set/Map? (30)",
+            "options": [
+                "O(N)",
+                "O(log N)",
+                "O(N^2)",
+                "O(1) on average"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "What is the time complexity of looking up a key in a standard JS Set/Map? (31)",
+            "options": [
+                "O(N)",
+                "O(N^2)",
+                "O(log N)",
+                "O(1) on average"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "What is the time complexity of looking up a key in a standard JS Set/Map? (32)",
+            "options": [
+                "O(N^2)",
+                "O(N)",
+                "O(1) on average",
+                "O(log N)"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "What is the time complexity of looking up a key in a standard JS Set/Map? (33)",
+            "options": [
+                "O(N^2)",
+                "O(log N)",
+                "O(N)",
+                "O(1) on average"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "What is the time complexity of looking up a key in a standard JS Set/Map? (34)",
+            "options": [
+                "O(N^2)",
+                "O(log N)",
+                "O(N)",
+                "O(1) on average"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "What is the time complexity of looking up a key in a standard JS Set/Map? (35)",
+            "options": [
+                "O(N)",
+                "O(log N)",
+                "O(1) on average",
+                "O(N^2)"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "What is the time complexity of looking up a key in a standard JS Set/Map? (36)",
+            "options": [
+                "O(N)",
+                "O(N^2)",
+                "O(1) on average",
+                "O(log N)"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "What is the time complexity of looking up a key in a standard JS Set/Map? (37)",
+            "options": [
+                "O(1) on average",
+                "O(N)",
+                "O(N^2)",
+                "O(log N)"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "What is the time complexity of looking up a key in a standard JS Set/Map? (38)",
+            "options": [
+                "O(N^2)",
+                "O(log N)",
+                "O(1) on average",
+                "O(N)"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "What is the time complexity of looking up a key in a standard JS Set/Map? (39)",
+            "options": [
+                "O(N^2)",
+                "O(log N)",
+                "O(1) on average",
+                "O(N)"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "How does CORS (Cross-Origin Resource Sharing) primarily function? (40)",
+            "options": [
+                "Via HTTP headers checked by the browser",
+                "Using WebSocket handshakes",
+                "By encrypting the payload",
+                "By routing through a proxy"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "How does CORS (Cross-Origin Resource Sharing) primarily function? (41)",
+            "options": [
+                "By encrypting the payload",
+                "Using WebSocket handshakes",
+                "Via HTTP headers checked by the browser",
+                "By routing through a proxy"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "How does CORS (Cross-Origin Resource Sharing) primarily function? (42)",
+            "options": [
+                "By encrypting the payload",
+                "Via HTTP headers checked by the browser",
+                "By routing through a proxy",
+                "Using WebSocket handshakes"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "How does CORS (Cross-Origin Resource Sharing) primarily function? (43)",
+            "options": [
+                "Via HTTP headers checked by the browser",
+                "By routing through a proxy",
+                "By encrypting the payload",
+                "Using WebSocket handshakes"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "How does CORS (Cross-Origin Resource Sharing) primarily function? (44)",
+            "options": [
+                "Using WebSocket handshakes",
+                "By encrypting the payload",
+                "Via HTTP headers checked by the browser",
+                "By routing through a proxy"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "How does CORS (Cross-Origin Resource Sharing) primarily function? (45)",
+            "options": [
+                "By encrypting the payload",
+                "Via HTTP headers checked by the browser",
+                "By routing through a proxy",
+                "Using WebSocket handshakes"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "How does CORS (Cross-Origin Resource Sharing) primarily function? (46)",
+            "options": [
+                "Via HTTP headers checked by the browser",
+                "By encrypting the payload",
+                "By routing through a proxy",
+                "Using WebSocket handshakes"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "How does CORS (Cross-Origin Resource Sharing) primarily function? (47)",
+            "options": [
+                "Via HTTP headers checked by the browser",
+                "By encrypting the payload",
+                "Using WebSocket handshakes",
+                "By routing through a proxy"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "How does CORS (Cross-Origin Resource Sharing) primarily function? (48)",
+            "options": [
+                "Using WebSocket handshakes",
+                "Via HTTP headers checked by the browser",
+                "By routing through a proxy",
+                "By encrypting the payload"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "How does CORS (Cross-Origin Resource Sharing) primarily function? (49)",
+            "options": [
+                "Via HTTP headers checked by the browser",
+                "By encrypting the payload",
+                "Using WebSocket handshakes",
+                "By routing through a proxy"
+            ],
+            "answer": 0
+        }
+    ]
+}
