@@ -1,0 +1,102 @@
+[
+    {
+        "question": "What does HTML stand for?",
+        "options": [
+            "Hyper Text Preprocessor",
+            "Hyper Text Markup Language",
+            "Hyper Text Multiple Language",
+            "Hyper Tool Multi Language"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Which CSS property is used to control the spacing between elements?",
+        "options": [
+            "padding",
+            "margin",
+            "spacing",
+            "border"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "How do you select an element with id 'demo' in CSS?",
+        "options": [
+            ".demo",
+            "*demo",
+            "#demo",
+            "demo"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Inside which HTML element do we put JavaScript?",
+        "options": [
+            "<javascript>",
+            "<js>",
+            "<script>",
+            "<scripting>"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Which of the following is not a JavaScript data type?",
+        "options": [
+            "Undefined",
+            "Number",
+            "Boolean",
+            "Float"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "What is the correct syntax for referring to an external script called 'app.js'?",
+        "options": [
+            "<script href=\"app.js\">",
+            "<script name=\"app.js\">",
+            "<script src=\"app.js\">",
+            "<script file=\"app.js\">"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Which method is used to remove the last element from an array in JavaScript?",
+        "options": [
+            "pop()",
+            "push()",
+            "shift()",
+            "unshift()"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "What does CSS stand for?",
+        "options": [
+            "Colorful Style Sheets",
+            "Creative Style Sheets",
+            "Cascading Style Sheets",
+            "Computer Style Sheets"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Which HTML attribute is used to define inline styles?",
+        "options": [
+            "class",
+            "style",
+            "font",
+            "styles"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "How do you write 'Hello World' in an alert box?",
+        "options": [
+            "msgBox('Hello World');",
+            "alertBox('Hello World');",
+            "msg('Hello World');",
+            "alert('Hello World');"
+        ],
+        "answer": 3
+    }
+]

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 14: Interactive Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body>
+    <div class="background-decor"></div>
+
+    <div class="container">
+
+        <!-- Quiz App View -->
+        <div class="quiz-card" id="quiz-view">
+            <header class="quiz-header">
+                <span class="mil-accent">WebDev Quiz</span>
+                <span class="question-count">Question <span id="current-q-num">1</span>/<span
+                        id="total-q-num">5</span></span>
+            </header>
+
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+
+            <div class="question-area">
+                <h2 id="question-text">Loading question...</h2>
+            </div>
+
+            <div class="options-grid" id="options-container">
+                <!-- Options injected by JS -->
+            </div>
+
+            <div class="controls-area">
+                <button id="next-btn" class="submit-btn hidden">Next Question <i
+                        data-feather="arrow-right"></i></button>
+            </div>
+        </div>
+
+        <!-- Score Summary View -->
+        <div class="quiz-card hidden" id="score-view">
+            <div class="score-header">
+                <h2>Quiz <span class="mil-accent">Completed!</span></h2>
+                <i data-feather="award" class="award-icon mil-accent"></i>
+            </div>
+
+            <div class="score-details">
+                <p>You scored</p>
+                <div class="final-score">
+                    <span id="score-points">0</span> <span class="score-out-of">/ 5</span>
+                </div>
+                <p id="score-message">Great job!</p>
+            </div>
+
+            <button id="restart-btn" class="submit-btn">Restart Quiz <i data-feather="rotate-ccw"></i></button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+
+</html>
