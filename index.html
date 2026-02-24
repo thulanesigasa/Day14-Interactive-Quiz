@@ -45,8 +45,8 @@
         <div class="quiz-card hidden" id="quiz-view">
             <header class="quiz-header">
                 <span class="mil-accent" id="active-difficulty-label">WebDev Quiz</span>
-                <span class="question-count">Question <span id="current-q-num">1</span>/<span
-                        id="total-q-num">5</span></span>
+                <span class="question-count">Stage <span id="current-stage-num">1</span>: Q<span
+                        id="current-q-num">1</span>/<span id="stage-q-total">5</span></span>
             </header>
 
             <div class="progress-bar-container">
@@ -67,11 +67,11 @@
             </div>
         </div>
 
-        <!-- Score Summary View -->
+        <!-- Score / Stage Summary View -->
         <div class="quiz-card hidden" id="score-view">
             <div class="score-header">
-                <h2>Quiz <span class="mil-accent">Completed!</span></h2>
-                <i data-feather="award" class="award-icon mil-accent"></i>
+                <h2 id="score-title">Quiz <span class="mil-accent">Result</span></h2>
+                <i data-feather="award" id="score-icon" class="award-icon mil-accent"></i>
             </div>
 
             <div class="score-details">
@@ -82,7 +82,15 @@
                 <p id="score-message">Great job!</p>
             </div>
 
-            <button id="restart-btn" class="submit-btn">Restart Quiz <i data-feather="rotate-ccw"></i></button>
+            <div style="display: flex; flex-direction: column; gap: 15px;">
+                <button id="next-stage-btn" class="submit-btn hidden">Next Stage <i
+                        data-feather="arrow-right"></i></button>
+                <button id="retry-stage-btn" class="submit-btn hidden">Retry Stage <i
+                        data-feather="rotate-ccw"></i></button>
+                <button id="restart-btn" class="submit-btn"
+                    style="background: transparent; border: 1px solid var(--glass-border); color: var(--heading-color);">Menu
+                    <i data-feather="home"></i></button>
+            </div>
         </div>
 
     </div>

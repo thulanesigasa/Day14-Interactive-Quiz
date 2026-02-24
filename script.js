@@ -15,14 +15,23 @@ const questionTextElement = document.getElementById('question-text');
 const optionsContainer = document.getElementById('options-container');
 const nextButton = document.getElementById('next-btn');
 
+const currentStageNumElement = document.getElementById('current-stage-num');
 const currentQNumElement = document.getElementById('current-q-num');
-const totalQNumElement = document.getElementById('total-q-num');
+const stageQTotalElement = document.getElementById('stage-q-total');
 const progressBar = document.getElementById('progress-bar');
 
+const scoreTitle = document.getElementById('score-title');
+const scoreIcon = document.getElementById('score-icon');
 const finalScoreElement = document.getElementById('score-points');
 const scoreMessageElement = document.getElementById('score-message');
 const totalScoreElement = document.querySelector('.score-out-of');
+
+const nextStageBtn = document.getElementById('next-stage-btn');
+const retryStageBtn = document.getElementById('retry-stage-btn');
 const restartButton = document.getElementById('restart-btn');
+
+const QUESTIONS_PER_STAGE = 5;
+const PASSING_SCORE = 3;
 
 document.addEventListener('DOMContentLoaded', () => {
     fetchQuestions();
@@ -36,6 +45,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     nextButton.addEventListener('click', handleNextButton);
+    nextStageBtn.addEventListener('click', () => {
+        currentStage++;
+        startStage();
+    });
+    retryStageBtn.addEventListener('click', () => {
+        startStage(); // Re-runs same stage
+    });
     restartButton.addEventListener('click', showStartScreen);
 });
 
@@ -45,13 +61,11 @@ async function fetchQuestions() {
         if (!response.ok) throw new Error('Network response was not ok');
         allQuestions = await response.json();
 
-        // Ensure start screen is visible initially once loaded
         showStartScreen();
     } catch (error) {
         console.error('Error fetching questions:', error);
         questionTextElement.textContent = "Error loading questions. Please ensure you're using a local server (e.g., Live Server).";
 
-        // Show quiz view with the error message
         startView.classList.add('hidden');
         quizView.classList.remove('hidden');
     }
@@ -76,27 +90,37 @@ function selectDifficulty(level) {
 }
 
 function startQuiz() {
-    currentQuestionIndex = 0;
-    score = 0;
-    totalQNumElement.textContent = questions.length;
-    nextButton.classList.add('hidden');
-    nextButton.innerHTML = 'Next Question <i data-feather="arrow-right"></i>';
+    currentStage = 0;
+    score = 0; // This will act as total cumulative score
+    stageQTotalElement.textContent = QUESTIONS_PER_STAGE;
+    startStage();
+}
+
+function startStage() {
+    stageScore = 0; // Reset just for this 5-question block
+    currentQuestionIndex = currentStage * QUESTIONS_PER_STAGE;
+
+    currentStageNumElement.textContent = currentStage + 1;
 
     // View Management
     startView.classList.add('hidden');
     scoreView.classList.add('hidden');
     quizView.classList.remove('hidden');
 
+    nextButton.classList.add('hidden');
+    nextButton.innerHTML = 'Next Question <i data-feather="arrow-right"></i>';
+
     loadQuestion();
-    feather.replace(); // Re-initialize icons if needed
+    feather.replace();
 }
 
 function loadQuestion() {
     resetState();
 
-    // Update Header and Progress
-    currentQNumElement.textContent = currentQuestionIndex + 1;
-    let progressPercentage = ((currentQuestionIndex) / questions.length) * 100;
+    // Progress calculation for the current stage block (1 to 5)
+    let qRelIndex = currentQuestionIndex % QUESTIONS_PER_STAGE;
+    currentQNumElement.textContent = qRelIndex + 1;
+    let progressPercentage = (qRelIndex / QUESTIONS_PER_STAGE) * 100;
     progressBar.style.width = `${progressPercentage}%`;
 
     let currentQuestion = questions[currentQuestionIndex];
@@ -106,7 +130,6 @@ function loadQuestion() {
         const button = document.createElement('button');
         button.textContent = optionText;
         button.classList.add('option-btn');
-        // Store the index to check against the answer
         button.dataset.index = index;
         button.addEventListener('click', selectAnswer);
         optionsContainer.appendChild(button);
@@ -122,7 +145,6 @@ function resetState() {
 
 function selectAnswer(e) {
     const selectedBtn = e.target;
-    // Account for clicking icon inside button (though currently there are none initially, good practice)
     const btn = selectedBtn.closest('.option-btn');
 
     const selectedIndex = parseInt(btn.dataset.index);
@@ -130,9 +152,8 @@ function selectAnswer(e) {
 
     if (selectedIndex === correctIndex) {
         btn.classList.add('correct');
-        // Optional: add check icon
         btn.innerHTML += ' <i data-feather="check-circle"></i>';
-        score++;
+        stageScore++;
     } else {
         btn.classList.add('incorrect');
         btn.innerHTML += ' <i data-feather="x-circle"></i>';
@@ -144,16 +165,15 @@ function selectAnswer(e) {
         correctBtn.innerHTML += ' <i data-feather="check-circle"></i>';
     }
 
-    feather.replace(); // Render new icons inserted via innerHTML
+    feather.replace();
 
-    // Disable all options after selection
     Array.from(optionsContainer.children).forEach(button => {
         button.disabled = true;
     });
 
-    // Check if it's the last question to change the button text
-    if (currentQuestionIndex === questions.length - 1) {
-        nextButton.innerHTML = 'View Results <i data-feather="bar-chart-2"></i>';
+    let qRelIndex = currentQuestionIndex % QUESTIONS_PER_STAGE;
+    if (qRelIndex === QUESTIONS_PER_STAGE - 1) {
+        nextButton.innerHTML = 'View Stage Results <i data-feather="bar-chart-2"></i>';
         feather.replace();
     }
 
@@ -162,32 +182,59 @@ function selectAnswer(e) {
 
 function handleNextButton() {
     currentQuestionIndex++;
-    if (currentQuestionIndex < questions.length) {
-        loadQuestion();
+    if (currentQuestionIndex % QUESTIONS_PER_STAGE === 0 || currentQuestionIndex >= questions.length) {
+        showStageResults();
     } else {
-        showScore();
+        loadQuestion();
     }
 }
 
-function showScore() {
+function showStageResults() {
     quizView.classList.add('hidden');
     scoreView.classList.remove('hidden');
-
-    // Finish progress bar
     progressBar.style.width = '100%';
 
-    finalScoreElement.textContent = score;
-    totalScoreElement.textContent = `/ ${questions.length}`;
+    nextStageBtn.classList.add('hidden');
+    retryStageBtn.classList.add('hidden');
 
-    // Set dynamic message based on score
-    const percentage = (score / questions.length) * 100;
-    if (percentage === 100) {
-        scoreMessageElement.textContent = "Perfect Score! You're a Web Dev master! 🌟";
-    } else if (percentage >= 80) {
-        scoreMessageElement.textContent = "Great job! You know your stuff! 🚀";
-    } else if (percentage >= 50) {
-        scoreMessageElement.textContent = "Good effort! Keep learning! 📚";
+    const totalStages = Math.ceil(questions.length / QUESTIONS_PER_STAGE);
+    const isLastStage = (currentStage === totalStages - 1) || (currentQuestionIndex >= questions.length);
+
+    if (stageScore >= PASSING_SCORE) {
+        // Passed
+        score += stageScore; // Save to total
+
+        if (isLastStage) {
+            scoreTitle.innerHTML = `Quiz <span class="mil-accent">Completed!</span>`;
+            scoreIcon.setAttribute('data-feather', 'award');
+            scoreIcon.style.color = 'var(--accent-color)';
+
+            finalScoreElement.textContent = score;
+            totalScoreElement.textContent = `/ ${questions.length}`;
+            scoreMessageElement.textContent = `You finished all stages! Incredible work.`;
+        } else {
+            scoreTitle.innerHTML = `Stage ${currentStage + 1} <span class="mil-accent" style="color: var(--correct-color);">Passed!</span>`;
+            scoreIcon.setAttribute('data-feather', 'check-circle');
+            scoreIcon.style.color = 'var(--correct-color)';
+
+            finalScoreElement.textContent = stageScore;
+            totalScoreElement.textContent = `/ ${QUESTIONS_PER_STAGE}`;
+            scoreMessageElement.textContent = "Great job! Ready for the next 5?";
+
+            nextStageBtn.classList.remove('hidden');
+        }
     } else {
-        scoreMessageElement.textContent = "Time to review some basics! You got this! 💪";
+        // Failed
+        scoreTitle.innerHTML = `Stage ${currentStage + 1} <span class="mil-accent" style="color: var(--incorrect-color);">Failed</span>`;
+        scoreIcon.setAttribute('data-feather', 'x-circle');
+        scoreIcon.style.color = 'var(--incorrect-color)';
+
+        finalScoreElement.textContent = stageScore;
+        totalScoreElement.textContent = `/ ${QUESTIONS_PER_STAGE}`;
+        scoreMessageElement.textContent = `You need at least ${PASSING_SCORE} out of ${QUESTIONS_PER_STAGE} to proceed.`;
+
+        retryStageBtn.classList.remove('hidden');
     }
+
+    feather.replace();
 }
